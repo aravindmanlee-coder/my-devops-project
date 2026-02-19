@@ -18,7 +18,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 sh 'docker rm -f my-app-container || true'
-                sh 'docker run -d -p 3000:3000 --name my-app-container my-app'
+                sh 'docker run -d -p 3000:80 --name my-app-container my-app'
             }
         }
     }
